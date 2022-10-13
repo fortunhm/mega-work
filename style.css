@@ -24,9 +24,9 @@ main {
 /* header site */
 .item {
     display: flex;
-    margin-left: 245px;
-    margin-right: 245px;
-    justify-content: space-between;
+    /* margin-left: 245px;
+    margin-right: 245px; */
+    justify-content: space-around;
     /* align-items: center; */
     /* padding-top: 10px; */
 }
@@ -38,7 +38,7 @@ main {
     /* margin-right: 18px; */
 }
 
-.idea-item img {
+.idea-item img ,.meno-item img{
     width: 40.42px;
     height: 51px;
 }
@@ -218,9 +218,7 @@ font-size: 10px;
         width: 100%;
     }
 
-    .players,
-    .blogs,
-    .courses {
+    .players,.blogs,.courses {
         grid-template-columns: repeat(1, 1fr);
 
     }
@@ -228,14 +226,21 @@ font-size: 10px;
     .player {
         flex-direction: column;
     }
-
+    .item{
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+    }
 }
 
 /*-------------- 
  tablet device
 ----------------*/
 
-@media only screen and (min-width:688px) and (max-width:992px) {
+/* @media only screen and (min-width:688px) and (max-width:992px) { */
+@media only screen and (max-width:768px) {
+
+
 
     .container {
         width: 100%;
@@ -249,5 +254,16 @@ font-size: 10px;
 
     .blogs {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .meno-item a {
+        font-size: 12px;
+    }
+    .idea-item a {
+        font-size: 12px;
+        margin-right: 16px;
+    }
+    .idea-item img ,.meno-item img{
+        width: 35px;
+        height: 35px;
     }
 }
